@@ -1,2 +1,1 @@
-# quoteme
-Don't Quote Me On That
+# Don't Quote Me On That
