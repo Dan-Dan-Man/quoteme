@@ -1,0 +1,11 @@
+bin
+obj
+*.suo
+*.orig
+*.csproj.user
+*.DotSettings.*
+*.sln.DotSettings
+*/.vs/
+.vs/
+*/.idea/
+QuoteMe/packages
