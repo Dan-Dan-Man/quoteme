@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuoteMe.MVC", "QuoteMe.MVC\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuoteMe.Tests", "QuoteMe.Tests\QuoteMe.Tests.csproj", "{B2DC287F-3F6B-4C6F-B0A0-A610F49B6275}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuoteMe.Storage", "QuoteMe.Storage\QuoteMe.Storage.csproj", "{E7A1AC70-EFDC-4C4F-B70F-D8D09E6C8693}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuoteMe.Models", "QuoteMe.Models\QuoteMe.Models.csproj", "{FA279E47-10EB-4D9D-8535-A1B8B03941BB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{B2DC287F-3F6B-4C6F-B0A0-A610F49B6275}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2DC287F-3F6B-4C6F-B0A0-A610F49B6275}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2DC287F-3F6B-4C6F-B0A0-A610F49B6275}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E7A1AC70-EFDC-4C4F-B70F-D8D09E6C8693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E7A1AC70-EFDC-4C4F-B70F-D8D09E6C8693}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E7A1AC70-EFDC-4C4F-B70F-D8D09E6C8693}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7A1AC70-EFDC-4C4F-B70F-D8D09E6C8693}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FA279E47-10EB-4D9D-8535-A1B8B03941BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA279E47-10EB-4D9D-8535-A1B8B03941BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA279E47-10EB-4D9D-8535-A1B8B03941BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA279E47-10EB-4D9D-8535-A1B8B03941BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

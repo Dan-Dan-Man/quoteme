@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using QuoteMe.Storage;
+using QuoteMe.MVC.Services.FinancePlanCalculator;
 
 namespace QuoteMe.MVC.DependencyRegistration
 {
@@ -7,7 +7,7 @@ namespace QuoteMe.MVC.DependencyRegistration
     {
         public static void RegisterAll(ContainerBuilder builder)
         {
-            builder.RegisterType<InMemoryStorageService>().As<IWritableStorageService>().InstancePerLifetimeScope();
+            builder.RegisterType<InterestFreeFinancePlanCalculator>().As<IFinancePlanCalculator>().SingleInstance();
         }
     }
 }

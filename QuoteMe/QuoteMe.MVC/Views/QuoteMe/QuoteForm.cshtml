@@ -1,0 +1,54 @@
+﻿@model QuoteMe.MVC.Models.Quote
+
+@using (Html.BeginForm("QuoteSummary", "QuoteMe"))
+{
+    <div class="formRowInput">
+        @Html.LabelFor(x => x.VehiclePrice) <b>(£) <span class="requiredStar">*</span></b>
+        <div class="fieldAndValidation">
+            @Html.EditorFor(x => x.VehiclePrice)
+            @Html.ValidationMessageFor(x => x.VehiclePrice, string.Empty, new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="formRowInput">
+        @Html.LabelFor(x => x.DepositAmount, new {title = "Deposit must be at least 15% of the vehicle price"}) <b>(£) <span class="requiredStar">*</span></b>
+        <div class="fieldAndValidation">
+            @Html.EditorFor(x => x.DepositAmount)
+            @Html.ValidationMessageFor(x => x.DepositAmount, string.Empty, new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="formRowInput">
+        @Html.LabelFor(x => x.DeliveryDate) <b><span class="requiredStar">*</span></b>
+        <div class="fieldAndValidation">
+            @Html.EditorFor(x => x.DeliveryDate)
+            @Html.ValidationMessageFor(x => x.DeliveryDate, string.Empty, new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="formRowInput">
+        @Html.LabelFor(x => x.NumOfRepaymentYears) <b><span class="requiredStar">*</span></b>
+        <div class="fieldAndValidation">
+            @Html.DropDownListFor(x => x.NumOfRepaymentYears, new SelectList(new List<int> { 1, 2, 3 })) year(s)
+            @Html.ValidationMessageFor(x => x.NumOfRepaymentYears, string.Empty, new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="formRowInput">
+        @Html.LabelFor(x => x.ArrangementFee, new { title = "To be paid on the first monthly payment" }) <b>(£) <span class="requiredStar">*</span></b>
+        <div class="fieldAndValidation">
+            @Html.EditorFor(x => x.ArrangementFee)
+            @Html.ValidationMessageFor(x => x.ArrangementFee, string.Empty, new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="formRowInput">
+        @Html.LabelFor(x => x.CompletionFee, new { title = "To be paid on the last monthly payment" }) <b>(£) <span class="requiredStar">*</span></b>
+        <div class="fieldAndValidation">
+            @Html.EditorFor(x => x.CompletionFee)
+            @Html.ValidationMessageFor(x => x.CompletionFee, string.Empty, new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <button class="button" type="submit">Generate Quote</button>
+}

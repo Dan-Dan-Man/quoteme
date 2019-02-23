@@ -22,3 +22,34 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.requiredStar {
+    color: #F22929;
+}
+
+.formRowInput {
+    margin-top: 10px;
+}
+
+.button {
+    margin-top: 20px;
+    border-radius: 1px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+td {
+    padding-right: 10px;
+}
+
+th {
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+.text-danger {
+    margin-left: 10px;
+}

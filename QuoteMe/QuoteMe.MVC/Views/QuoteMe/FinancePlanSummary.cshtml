@@ -1,0 +1,40 @@
+﻿@model QuoteMe.MVC.Models.FinancePlan
+
+<h2>Finance Plan Summary</h2>
+
+<table>
+    <tbody>
+        <tr>
+            <td><b>@Html.LabelFor(x => x.Quote.VehiclePrice):</b></td>
+            <td>@Model.VehiclePriceFormatted</td>
+        </tr>
+        <tr>
+            <td><b>@Html.LabelFor(x => x.Quote.DepositAmount):</b></td>
+            <td>@Model.DepositAmountFormatted</td>
+        </tr>
+        <tr>
+            <td><b>@Html.LabelFor(x => x.OutstandingPayment):</b></td>
+            <td>@Model.OutstandingPaymentFormatted</td>
+        </tr>
+        <tr>
+            <td><b>@Html.LabelFor(x => x.OutstandingPaymentWithFees):</b></td>
+            <td>@Model.OutstandingPaymentWithFeesFormatted</td>
+        </tr>
+        <tr>
+            <td><b>@Html.LabelFor(x => x.Quote.DeliveryDate):</b></td>
+            <td>@Model.DeliveryDateFormatted</td>
+        </tr>
+        <tr>
+            <td><b>@Html.LabelFor(x => x.Quote.NumOfRepaymentYears):</b></td>
+            <td>@Model.Quote.NumOfRepaymentYears year(s)</td>
+        </tr>
+        <tr>
+            <td><b>@Html.LabelFor(x => x.Quote.ArrangementFee):</b></td>
+            <td>@Model.ArrangmentFeeFormatted</td>
+        </tr>
+        <tr>
+            <td><b>@Html.LabelFor(x => x.Quote.CompletionFee):</b></td>
+            <td>@Model.CompletionFeeFormatted</td>
+        </tr>
+    </tbody>
+</table>

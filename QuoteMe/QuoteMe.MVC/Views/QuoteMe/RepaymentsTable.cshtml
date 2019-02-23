@@ -1,0 +1,19 @@
+﻿@model List<QuoteMe.MVC.Models.FinancePlan.MonthlyRepayment>
+
+<h2>Repayment Plan</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Date Of Payment Due</th>
+            <th>Amount Due</th>
+            <th>Outstanding Payment Due</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var monthlyRepayment in Model)
+        {
+            @Html.Partial("RepaymentsTableRow", monthlyRepayment)
+        }
+    </tbody>
+</table>

@@ -6,7 +6,7 @@ namespace QuoteMe.Storage
 {
     public interface IReadableStorageService
     {
-        IQueryable<Quote> GetQuotes(int page, int skip);
+        IQueryable<Quote> GetQuotes(int page, int take);
         Quote GetQuote(Guid quoteId);
     }
 }

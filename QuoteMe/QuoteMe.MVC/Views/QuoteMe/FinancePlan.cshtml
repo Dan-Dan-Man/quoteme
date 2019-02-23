@@ -1,0 +1,4 @@
+﻿@model QuoteMe.MVC.Models.FinancePlan
+
+@Html.Partial("FinancePlanSummary", Model)
+@Html.Partial("RepaymentsTable", Model.MonthlyRepayments)

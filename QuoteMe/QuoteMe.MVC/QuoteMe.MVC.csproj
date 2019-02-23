@@ -52,6 +52,10 @@
       <HintPath>..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="DataAnnotationsExtensions, Version=5.0.1.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DataAnnotationsExtensions.5.0.1.27\lib\NETFramework40\DataAnnotationsExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -156,13 +160,20 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuoteMeController.cs" />
+    <Compile Include="Controllers\QuoteMeValidationController.cs" />
     <Compile Include="DependencyRegistration\DependencyRegistry.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CreateQuote.cs" />
+    <Compile Include="Models\FinancePlan.cs" />
+    <Compile Include="Models\Quote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Services\Extensions\FormattingExtensions.cs" />
+    <Compile Include="Services\FinancePlanCalculator\FinancePlanCalculator.cs" />
+    <Compile Include="Services\FinancePlanCalculator\InterestFreeFinancePlanCalculator.cs" />
+    <Compile Include="Services\FinancePlanCalculator\IFinancePlanCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -170,7 +181,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\QuoteMe.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -199,9 +210,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\QuoteMe\Index.cshtml" />
+    <Content Include="Views\QuoteMe\QuoteForm.cshtml" />
+    <Content Include="Views\QuoteMe\RepaymentsTableRow.cshtml" />
+    <Content Include="Views\QuoteMe\FinancePlan.cshtml" />
+    <Content Include="Views\QuoteMe\FinancePlanSummary.cshtml" />
+    <Content Include="Views\QuoteMe\RepaymentsTable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -213,16 +227,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\QuoteMe.Models\QuoteMe.Models.csproj">
-      <Project>{fa279e47-10eb-4d9d-8535-a1b8b03941bb}</Project>
-      <Name>QuoteMe.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\QuoteMe.Storage\QuoteMe.Storage.csproj">
-      <Project>{e7a1ac70-efdc-4c4f-b70f-d8d09e6c8693}</Project>
-      <Name>QuoteMe.Storage</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
