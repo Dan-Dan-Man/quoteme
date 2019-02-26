@@ -18,7 +18,7 @@ namespace QuoteMe.MVC.Services.FinancePlanCalculator
             outstandingPayment = outstandingPayment + quote.ArrangementFee + quote.CompletionFee;
         }
 
-        protected virtual decimal GetAdditionalCosts(Quote quote, int currentMonth, int monthsToPay)
+        protected virtual decimal GetAdditionalCostsForCurrentMonth(Quote quote, int currentMonth, int monthsToPay)
         {
             // First month
             if (currentMonth == 0)

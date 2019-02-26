@@ -20,7 +20,7 @@ namespace QuoteMe.MVC.Services.FinancePlanCalculator
             for (int month = 0; month < monthsToPay; month++)
             {
                 nextPaymentDate = GetNextPaymentDate(nextPaymentDate, DayOfWeek.Monday);
-                var additionalCosts = GetAdditionalCosts(quote, month, monthsToPay);
+                var additionalCosts = GetAdditionalCostsForCurrentMonth(quote, month, monthsToPay);
                 decimal moneyDueThisMonth = amountDuePerMonth + additionalCosts;
                 outstandingPayment -= moneyDueThisMonth;
 

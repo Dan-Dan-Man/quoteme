@@ -28,7 +28,7 @@ namespace QuoteMe.MVC.Models
         public string OutstandingPaymentFormatted => OutstandingPayment.AsCurrency();
         public string OutstandingPaymentWithFeesFormatted => OutstandingPaymentWithFees.AsCurrency();
         public string DeliveryDateFormatted => Quote.DeliveryDate.ToShortDateString();
-        public string ArrangmentFeeFormatted => Quote.ArrangementFee.AsCurrency();
+        public string ArrangementFeeFormatted => Quote.ArrangementFee.AsCurrency();
         public string CompletionFeeFormatted => Quote.CompletionFee.AsCurrency();
 
         public class MonthlyRepayment
